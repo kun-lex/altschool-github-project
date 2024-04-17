@@ -4,10 +4,15 @@ import './App.css'
 
 // layouts
 import Home from "./Layouts/Home";
+import GitRepo from "./Layouts/GitRepo";
+import ErrorBoundary from "./Layouts/ErrorBoundray";
+import ErrorTestComponent from "./Layouts/TestError";
 
 // components
 import Navbar from "./global component/Navbar";
 import Footer from "./global component/Footer";
+import RepoDetails from "./section component/RepoDetails";
+import NotFoundPage from "./Layouts/NotFound";
 
 function App() {
 
@@ -15,9 +20,15 @@ function App() {
     <Router>
       <Fragment>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/repo" element={<GitRepo />} />
+            <Route path="/repo/:repoName" Component={RepoDetails} />
+            <Route path="/error-test" element={<ErrorTestComponent />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </ErrorBoundary>
         <Footer />
       </Fragment>
     </Router>
