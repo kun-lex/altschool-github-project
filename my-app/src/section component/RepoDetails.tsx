@@ -14,7 +14,7 @@ interface Repository {
   forks_count: number;
 }
 
-interface RepoDetailsParams {
+export type RepoDetailsParams = {
   repoName: string;
 }
 
