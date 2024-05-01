@@ -56,14 +56,14 @@ export default function HeroSection() {
           </Text>
           <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
             <Button
-              rounded={'full'}
+              rounded={'10px'}
               size={'lg'}
               fontWeight={'normal'}
               px={6}
               color={'white'}
               bg={'#A100ED'}
               _hover={{ bg: '#0038FF' }}>
-              Hire me
+              Hire me !
             </Button>
           </Stack>
         </Stack>

@@ -37,8 +37,8 @@ interface NavLinkProps {
 
 const NavLink: React.FC<NavLinkProps> = ({ label, route }) => (
   <Box
-    as={Link}
-    to={route}
+    as="a"
+    href={route}
     px={2}
     py={1}
     rounded={'md'}

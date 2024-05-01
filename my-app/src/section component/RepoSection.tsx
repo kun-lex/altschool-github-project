@@ -25,7 +25,7 @@ const RepoSection: React.FC = () => {
 
   const fetchRepos = async () => {
     try {
-      const token = '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'; // Replace with your actual token
+      const token = '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'; // Replace with your actual token
       const perPage = 10;
       const response = await axios.get(`https://api.github.com/user/repos?page=${currentPage}&per_page=${perPage}`, {
         headers: {

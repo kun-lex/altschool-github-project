@@ -7,6 +7,7 @@ import Home from "./Layouts/Home";
 import GitRepo from "./Layouts/GitRepo";
 import ErrorBoundary from "./Layouts/ErrorBoundray";
 import ErrorTestComponent from "./Layouts/TestError";
+import ProjectPage from "./Layouts/Projects";
 
 // components
 import Navbar from "./global component/Navbar";
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/repo" element={<GitRepo />} />
+            <Route path="/projects" element={<ProjectPage />} />
             <Route path="/repo/:repoName" Component={RepoDetails} />
             <Route path="/error-test" element={<ErrorTestComponent />} />
             <Route path="*" element={<NotFoundPage />} />

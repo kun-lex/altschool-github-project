@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box } from '@chakra-ui/react';
 
 function ErrorTestBtn() {
@@ -15,7 +14,7 @@ function ErrorTestBtn() {
       bottom="4"
       right="4"
       p="3"
-      bg="blue.500"
+      bg="purple.700"
       color="white"
       borderRadius="full"
       textDecoration="none"

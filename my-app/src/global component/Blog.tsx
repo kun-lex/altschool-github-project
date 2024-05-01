@@ -10,6 +10,7 @@ import {
   useColorModeValue,
   Container,
 } from '@chakra-ui/react'
+import me from '../assets/images/Me.png'
 
 
 
@@ -45,7 +46,7 @@ const BlogAuthor = (props: BlogAuthorProps) => {
       <Image
         borderRadius="full"
         boxSize="40px"
-        src="https://100k-faces.glitch.me/random-image"
+        src={me}
         alt={`Avatar of ${props.name}`}
       />
       <Text fontWeight="medium">{props.name}</Text>
@@ -106,8 +107,8 @@ const ArticleList = () => {
           marginTop={{ base: '3', sm: '0' }}>
           <BlogTags tags={['Engineering', 'Product']} />
           <Heading marginTop="1">
-            <Text textDecoration="none" _hover={{ textDecoration: 'none' }}>
-              Articles
+            <Text textDecoration="none" fontSize={25} _hover={{ textDecoration: 'underline' }}>
+              My Journey at AltSchool Africa
             </Text>
           </Heading>
           <Text
@@ -115,12 +116,9 @@ const ArticleList = () => {
             marginTop="2"
             color={useColorModeValue('gray.700', 'gray.200')}
             fontSize="lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry&apos;s standard dummy text ever since the
-            1500s, when an unknown printer took a galley of type and scrambled it to make
-            a type specimen book.
+            I began my journey at AltSchool Africa with a mix of excitement and apprehension. The idea of diving into frontend engineering, a field where creativity meets technology, was both thrilling and daunting. This article recounts my experiences, challenges, and growth as a student in the Frontend Engineering department.
           </Text>
-          <BlogAuthor name="John Doe" date={new Date('2021-04-06T19:01:27Z')} />
+          <BlogAuthor name="David Akinola" date={new Date('2024-04-26T19:01:27Z')} />
         </Box>
       </Box>
     </Container>
