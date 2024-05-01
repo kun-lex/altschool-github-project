@@ -21,7 +21,7 @@ const RepoList: React.FC = () => {
 
   const fetchRepos = async () => {
     try {
-      const token = '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'; // Replace with your actual token
+      const token = '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'; // Replace with your actual token
       const perPage = 4; // Display only 4 repos
       const response = await axios.get(`https://api.github.com/user/repos?per_page=${perPage}`, {
         headers: {

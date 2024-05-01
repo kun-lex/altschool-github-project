@@ -28,7 +28,7 @@ const RepoDetails: React.FC = () => {
 
   const fetchRepoDetails = async () => {
     try {
-      const token = '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'; // Replace with your actual token
+      const token = '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'; // Replace with your actual token
       const response = await axios.get(`https://api.github.com/user/repos/${repoName}`, {
         headers: {
           Authorization: `token ${token}`

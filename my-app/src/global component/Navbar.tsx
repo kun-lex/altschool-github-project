@@ -18,10 +18,11 @@ import {
   ModalBody,
   ModalCloseButton,
   SimpleGrid,
-  Link,
+  
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon, PhoneIcon } from '@chakra-ui/icons';
 import Logo from '../assets/images/Techboy.png';
+import { Link } from 'react-router-dom';
 
 const Links = [
   { label: 'Home', route: '/' },
@@ -37,8 +38,8 @@ interface NavLinkProps {
 
 const NavLink: React.FC<NavLinkProps> = ({ label, route }) => (
   <Box
-    as="a"
-    href={route}
+    as={Link}
+    to={route}
     px={2}
     py={1}
     rounded={'md'}
@@ -121,11 +122,11 @@ const Navbar: React.FC = () => {
           <ModalCloseButton />
           <ModalBody>
             <SimpleGrid columns={2} spacing={4}>
-              <Link href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank">LinkedIn</Link>
-              <Link href="https://www.instagram.com/your-instagram-profile/" target="_blank">Instagram</Link>
-              <Link href="https://www.facebook.com/your-facebook-profile/" target="_blank">Facebook</Link>
-              <Link href="https://twitter.com/your-twitter-profile/" target="_blank">Twitter</Link>
-              <Link href="https://wa.me/your-phone-number" target="_blank">WhatsApp</Link>
+              <Link to="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank">LinkedIn</Link>
+              <Link to="https://www.instagram.com/your-instagram-profile/" target="_blank">Instagram</Link>
+              <Link to="https://www.facebook.com/your-facebook-profile/" target="_blank">Facebook</Link>
+              <Link to="https://twitter.com/your-twitter-profile/" target="_blank">Twitter</Link>
+              <Link to="https://wa.me/your-phone-number" target="_blank">WhatsApp</Link>
               {/* Add more platforms as needed */}
             </SimpleGrid>
           </ModalBody>
